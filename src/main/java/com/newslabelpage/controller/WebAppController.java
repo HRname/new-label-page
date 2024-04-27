@@ -32,4 +32,20 @@ public class WebAppController {
 
        return Result.success(returnWebApp);
     }
+
+    @PutMapping("/searchHome")
+    public Result updateWebApp(@RequestBody WebApp webApp){
+        webAppService.updateWebApp(webApp);
+
+        WebApp returnWebApp = webAppService.getWebApp(webApp.getId());
+
+        return Result.success(returnWebApp);
+    }
+
+    @DeleteMapping("/searchHome")
+    public Result deleteWebApp(WebApp webApp){
+        webAppService.deleteWebApp(webApp);
+
+        return Result.success();
+    }
 }

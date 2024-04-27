@@ -27,4 +27,14 @@ public class WebAppServiceImpl implements WebAppService {
     public WebApp getWebApp(Integer id) {
         return webAppMapper.getWebApp(id);
     }
+
+    @Override
+    public void updateWebApp(WebApp webApp) {
+        webAppMapper.updateWebApp(webApp);
+    }
+
+    @Override
+    public void deleteWebApp(WebApp webApp) {
+        webAppMapper.deleteWebApp(webApp);
+    }
 }

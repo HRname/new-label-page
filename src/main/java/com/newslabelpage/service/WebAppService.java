@@ -10,4 +10,8 @@ public interface WebAppService {
     void addWebApp(WebApp webApp);
 
     WebApp getWebApp(Integer id);
+
+    void updateWebApp(WebApp webApp);
+
+    void deleteWebApp(WebApp webApp);
 }
