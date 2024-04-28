@@ -7,10 +7,10 @@ import org.apache.ibatis.annotations.Update;
 
 @Mapper
 public interface SearchSettingMapper {
-    @Select("select * from searchsetting where user_id=#{userId}")
+    @Select("select * from search_setting where user_id=#{userId}")
     SearchSetting getSearchSetting(SearchSetting searchSetting);
 
-    @Update("update searchsetting set " +
+    @Update("update search_setting set " +
             "search_height=#{searchHeight}," +
             "search_bottom_margin=#{searchBottomMargin}," +
             "search_border_radius=#{searchBorderRadius}," +
