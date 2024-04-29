@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class SearchSettingController {
     @Autowired
-    SearchSettingService searchSettingService;
+    private SearchSettingService searchSettingService;
 
     @GetMapping("/searchSetting")
     public Result getSearchSetting(SearchSetting searchSetting){
