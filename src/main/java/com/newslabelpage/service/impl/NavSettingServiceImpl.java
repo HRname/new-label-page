@@ -14,4 +14,9 @@ public class NavSettingServiceImpl implements NavSettingService {
     public NavSetting getNavSetting(NavSetting navSetting) {
         return navSettingMapper.getNavSetting(navSetting);
     }
+
+    @Override
+    public void updateNavSetting(NavSetting navSetting) {
+        navSettingMapper.updateNavSetting(navSetting);
+    }
 }

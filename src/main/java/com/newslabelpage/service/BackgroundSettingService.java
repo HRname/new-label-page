@@ -4,4 +4,6 @@ import com.newslabelpage.pojo.BackgroundSetting;
 
 public interface BackgroundSettingService {
     BackgroundSetting getBackgroundSetting(BackgroundSetting backgroundSetting);
+
+    void updateBackgroundSetting(BackgroundSetting backgroundSetting);
 }

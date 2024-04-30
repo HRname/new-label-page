@@ -4,4 +4,6 @@ import com.newslabelpage.pojo.TimeSetting;
 
 public interface TimeSettingService {
     TimeSetting getTimeSetting(TimeSetting timeSetting);
+
+    void updateTimeSetting(TimeSetting timeSetting);
 }

@@ -10,8 +10,14 @@ import org.springframework.stereotype.Service;
 public class BackgroundSettingServiceImpl implements BackgroundSettingService {
     @Autowired
     private BackgroundSettingMapper backgroundSettingMapper;
+
     @Override
     public BackgroundSetting getBackgroundSetting(BackgroundSetting backgroundSetting) {
         return backgroundSettingMapper.getBackgroundSetting(backgroundSetting);
+    }
+
+    @Override
+    public void updateBackgroundSetting(BackgroundSetting backgroundSetting) {
+        backgroundSettingMapper.updateBackgroundSetting(backgroundSetting);
     }
 }

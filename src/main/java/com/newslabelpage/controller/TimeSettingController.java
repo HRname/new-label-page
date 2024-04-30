@@ -5,9 +5,7 @@ import com.newslabelpage.pojo.TimeSetting;
 import com.newslabelpage.service.TimeSettingService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin(origins = "http://127.0.0.1:8081")
 @Slf4j
@@ -21,5 +19,12 @@ public class TimeSettingController {
         TimeSetting timeSettingOut = timeSettingService.getTimeSetting(timeSetting);
 
         return Result.success(timeSettingOut);
+    }
+
+    @PutMapping("/timeSetting")
+    public Result updateTimeSetting(@RequestBody TimeSetting timeSetting){
+        timeSettingService.updateTimeSetting(timeSetting);
+
+        return Result.success();
     }
 }

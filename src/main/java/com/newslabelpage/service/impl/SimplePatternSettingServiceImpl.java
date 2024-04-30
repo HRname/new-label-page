@@ -15,4 +15,9 @@ public class SimplePatternSettingServiceImpl implements SimplePatternSettingServ
     public SimplePatternSetting getSimplePatternSetting(SimplePatternSetting simplePatternSetting) {
         return simplePatternSettingMapper.getSimplePatternSetting(simplePatternSetting);
     }
+
+    @Override
+    public void updateSimplePatternSetting(SimplePatternSetting simplePatternSetting) {
+        simplePatternSettingMapper.updateSimplePatternSetting(simplePatternSetting);
+    }
 }

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/175aabf2-924b-4f0e-8a6c-9d770d97ee0f/console.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/newslabelpage/mapper/NavSettingMapper.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/newslabelpage/mapper/SearchSettingMapper.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/newslabelpage/mapper/WebAppSettingMapper.java" dialect="GenericSQL" />
   </component>

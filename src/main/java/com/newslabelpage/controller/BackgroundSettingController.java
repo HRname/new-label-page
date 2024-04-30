@@ -5,13 +5,11 @@ import com.newslabelpage.pojo.Result;
 import com.newslabelpage.service.BackgroundSettingService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://127.0.0.1:8081")
 @Slf4j
 @RestController
+@CrossOrigin(origins = "http://127.0.0.1:8081")
 public class BackgroundSettingController {
     @Autowired
     private BackgroundSettingService backgroundSettingService;
@@ -21,5 +19,12 @@ public class BackgroundSettingController {
         BackgroundSetting backgroundSettingOut = backgroundSettingService.getBackgroundSetting(backgroundSetting);
 
         return Result.success(backgroundSettingOut);
+    }
+
+    @PutMapping("/backgroundSetting")
+    public Result updateBackgroundSetting(@RequestBody BackgroundSetting backgroundSetting){
+        backgroundSettingService.updateBackgroundSetting(backgroundSetting);
+
+        return Result.success();
     }
 }

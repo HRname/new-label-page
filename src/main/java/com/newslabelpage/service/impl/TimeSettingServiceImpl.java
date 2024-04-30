@@ -14,4 +14,9 @@ public class TimeSettingServiceImpl implements TimeSettingService {
     public TimeSetting getTimeSetting(TimeSetting timeSetting) {
         return timeSettingMapper.getTimeSetting(timeSetting);
     }
+
+    @Override
+    public void updateTimeSetting(TimeSetting timeSetting) {
+        timeSettingMapper.updateTimeSetting(timeSetting);
+    }
 }
